@@ -15,7 +15,7 @@ const sendEmail = async (email,res) => {
     from: process.env.SMPT_MAIL,
     to: email,
     subject: "congratulation",
-    text:`my love meri jaan,
+    text:`Dear candidate,
 
     We are pleased to confirm your registration for the upcoming XYZ Event, scheduled to be held on [Event Date] at [Event Venue]. Thank you for your interest in our event and for registering as a participant.
     
@@ -33,7 +33,7 @@ const sendEmail = async (email,res) => {
   };
 
   await transporter.sendMail(mailOptions);
-  console.log("mail gya");
+  console.log("Mail send successfully");
 
 
 };
